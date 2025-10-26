@@ -1,2 +1,3 @@
 # SAM4CoreSeg
 Fine-tuned SAM adaptation with multi-scale guidance for automated detection and RQD analytics in rock core imagery
+Rock core logging is critical for evaluating rock mass quality, yet traditional manual measurement of rock quality designation (RQD) indicator from boreholes remains highly labor-intensive. To address the limitations of insufficient detection accuracy and generalizability in mainstream deep learning methods, we propose SAM4CoreSeg, a vision foundation model adapted for rock core instance segmentation, combined with a fine-grained RQD analytics method. SAM4CoreSeg adopts an enhanced multi-scale feature learning design that seamlessly integrates the Segment Anything Model (SAM) encoder with additional decoders. 
