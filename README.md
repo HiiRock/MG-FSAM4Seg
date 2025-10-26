@@ -12,17 +12,14 @@ Rock core logging is critical for evaluating rock mass quality, yet traditional 
 <br>
 
 # Dependencies
+
 - Linux or Windows
-  
 - Python 3.7+, recommended 3.10
-  
 - PyTorch 2.0 or higher, recommended 2.1
-  
 - CUDA 11.7 or higher, recommended 12.1
-  
 - MMCV 2.0 or higher, recommended 2.1
   
-For more installation details, please refer to [RSPrompter](# https://github.com/KyanChen/RSPrompter/tree/release)
+For more installation details, please refer to  [RSPrompter](https://github.com/KyanChen/RSPrompter/tree/release)
 
 # Dataset Preparation
 ```
