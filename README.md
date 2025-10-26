@@ -12,7 +12,7 @@ Rock core logging is critical for evaluating rock mass quality, yet traditional 
 <br>
 
 # Dependencies
-
+We have uploaded different model files and configuration files. They need to be run based on MMDetection. 
 - Linux or Windows
 - Python 3.7+, recommended 3.10
 - PyTorch 2.0 or higher, recommended 2.1
@@ -33,3 +33,19 @@ ${DATASET_ROOT} # Dataset root directory, for example: /home/username/data/Core
     ├── val
     └── test
 ```
+
+# Useage
+If you want to train the model, run the following command in the terminal:
+```shell
+python tools/train.py configs/xxx.py  # xxx.py is the configuration file you want to use
+```
+If you want to validate the model and generate images, run the following command in the terminal:
+```shell
+python tools/test.py configs/xxx.py ${CHECKPOINT_FILE}  # xxx.py is the configuration file you want to use, CHECKPOINT_FILE is the checkpoint file you want to use
+```
+
+# Acknowledgement
+This project is developed based on the [RSPrompter](https://github.com/KyanChen/RSPrompter/tree/release) and [MMDetection](https://github.com/open-mmlab/mmdetection/tree/main). And here, we would like to thank Chen for his support and the developers of the MMDetection project.
+
+# License
+This project is licensed under the [Apache 2.0 license](LICENSE).
