@@ -11,36 +11,3 @@ Rock core logging is critical for evaluating rock mass quality, yet traditional 
   <img src="figures/visualization.png" width="800"/>
 </div>
 <br>
-
-# Dependencies
-This project is based on the MMDetection framework and supports the following environment:
-- OS: Linux or Windows
-- Python ≥ 3.7 (recommended 3.10)
-- PyTorch ≥ 2.0 (recommended 2.1)
-- CUDA ≥ 11.7 (recommended 12.1)
-- MMCV ≥ 2.0 (recommended 2.1)
-
-We recommend creating a conda virtual environment and installing PyTorch and MMCV first.
-For detailed installation steps, please refer to the [MMDetection documentation](https://github.com/open-mmlab/mmdetection/tree/main).
-
-# Dataset Preparation
-```
-${DATASET_ROOT} # Dataset root directory, for example: /home/username/data/Core
-├── annotations
-│   ├── train.json
-│   ├── val.json
-│   └── test.json
-└── images
-    ├── train
-    ├── val
-    └── test
-```
-Our dataset follows the COCO format and contains annotated rock core images with instance masks. For more support methods, please refer to [MMDetection](https://github.com/open-mmlab/mmdetection/tree/main).
-
-
-# Acknowledgements
-> This project is developed based on [RSPrompter](https://github.com/KyanChen/RSPrompter/tree/release) and [MMDetection](https://github.com/open-mmlab/mmdetection/tree/main).  
-> We sincerely thank the authors of these projects for their open-source contributions and support.
-
-# License
-This project is licensed under the [Apache 2.0 license](LICENSE).
