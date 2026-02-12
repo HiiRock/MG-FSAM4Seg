@@ -1,11 +1,11 @@
 <div align="center">
     <h2>
-        Fine-tuned SAM adaptation with multi-scale guidance for automated detection and RQD analytics in rock core imagery
+        Fine-tuned SAM adaptation with multi-scale guidance for automated detection toward image-based core length and RQD measurement
     </h2>
 </div>
 
 # Introduction
-Rock core logging is critical for evaluating rock mass quality, yet traditional manual measurement of rock quality designation (RQD) indicator from boreholes remains highly labor-intensive. To address the limitations of insufficient detection accuracy and generalizability in mainstream deep learning methods, we propose **SAM4CoreSeg**, a vision foundation model adapted for rock core instance segmentation, combined with a fine-grained RQD analytics method. **SAM4CoreSeg** adopts an enhanced multi-scale feature learning design that seamlessly integrates the Segment Anything Model (SAM) encoder with additional decoders. 
+Rock core logging is critical for evaluating rock mass quality, yet traditional manual measurement of rock quality designation (RQD) indicator from boreholes remains highly labor-intensive. To address the limitations of insufficient detection accuracy and generalizability in mainstream deep learning methods, we propose MG-FSAM4Seg, a vision foundation model adapted for rock core instance segmentation, combined with a fine-grained RQD analytics method. MG-FSAM4Seg adopts an enhanced multi-scale feature learning design that seamlessly integrates the Segment Anything Model (SAM) encoder with additional decoders, where the encoder is further fine-tuned via low-rank adaptation. 
 
 <div align="center">
   <img src="figures/visualization.png" width="800"/>
@@ -37,24 +37,6 @@ ${DATASET_ROOT} # Dataset root directory, for example: /home/username/data/Core
 ```
 Our dataset follows the COCO format and contains annotated rock core images with instance masks. For more support methods, please refer to [MMDetection](https://github.com/open-mmlab/mmdetection/tree/main).
 
-# Usage
-## Train
-Run the following command to start training:
-```shell
-python tools/train.py configs/xxx.py  # xxx.py is the configuration file you want to use
-```
-
-## Evaluate
-To validate the model and visualize the results:
-```shell
-python tools/test.py configs/xxx.py ${CHECKPOINT_FILE}  # xxx.py is the configuration file you want to use, CHECKPOINT_FILE is the checkpoint file you want to use
-```
-
-## Inference
-To perform image prediction and save the results:
-```shell
-python demo/image_demo.py ${IMAGE_FILE}  configs/rsprompter/xxx.py --weights ${CHECKPOINT_FILE} --out-dir ${OUTPUT_DIR}  # IMAGE_FILE is the image file you want to predict, xxx.py is the configuration file you want to use, CHECKPOINT_FILE is the checkpoint file you want to use, OUTPUT_DIR is the output path of the prediction result
-```
 
 # Acknowledgements
 > This project is developed based on [RSPrompter](https://github.com/KyanChen/RSPrompter/tree/release) and [MMDetection](https://github.com/open-mmlab/mmdetection/tree/main).  
